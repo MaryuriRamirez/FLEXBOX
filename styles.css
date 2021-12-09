@@ -8,7 +8,7 @@ body {
     padding: 0;
 }
 header{
-    padding: 50px;
+    padding: 60px;
     background-color: aquamarine;
     text-align: center;
 }
@@ -35,17 +35,85 @@ body{
 }
 
 .contenedor{
-    background-color: #fff;
-    width: 500px;
-    border: solid 3px rgb(135, 222, 210);
-    margin: 5rem auto;
+    color: rgb(71, 66, 66);
+    background-color: rgb(255, 255, 255);
+    margin: 5rem auto; 
+    width: 50%;
+    border: solid 4px rgb(135, 222, 210);
     padding: 2rem;
     border-radius: 1rem;
+    position: relative;
+    height: 70vh;
+
+    display: flex;
+    row-gap: 1rem;   
+    flex-flow: column;
+
 }
 
-.contenedor >
-@media screen and (max-width: 700px){
-    nav, .row{
-        flex-direction: column;
-    }  
+
+[class*="hijo"]:{
+    background-color: darkseagreen;
+    padding: .5rem;
+    flex-basis: 1rem;
+    flex-grow: 1;
+    transition: .3s;
+    box-shadow: .5rem 0 .5rem rgba(0 0 0/ .3);
+    position: relative;
+    border-radius: .5rem 0 0 .5rem;
+}
+
+[class*="hijo"]:hover{
+    flex-grow: 10;
+    box-shadow: .5rem 0 .5rem rgba(0 0 0/ .3);
+    position: relative;
+    border-radius: .5rem 0 0 .5rem;
+}
+
+[class*="hijo"]:hover .hover-visible{
+    flex-grow: 10;
+    opacity: 1;
+    
+}
+
+.hover-visible{
+    width: 30rem;
+    position: absolute;
+    left: 3rem;
+    opacity: 0;
+    transition: .3s;
+}
+
+
+.hijo-1{
+    overflow: hidden;
+}
+.hijo-2{
+    background-color: rgb(183, 247, 222);
+}
+
+.hijo-3{
+    background-color: rgb(174, 255, 185);
+}
+
+.hijo-4{
+    background-color: rgb(241, 247, 162);
+}
+
+.main-nav{
+    background-color: #bbb;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.nav__container{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.nav__item{
+    text-decoration: none;
+    list-style: none;
 }
